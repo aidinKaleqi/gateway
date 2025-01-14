@@ -19,9 +19,12 @@ export class AllExceptionsFilter implements ExceptionFilter {
       message = exception.message || 'An unexpected error occurred';
     }
     response.status(status).json({
-      statusCode: status,
-      message,
-      path: request.url,
+      data: {
+        statusCode: status,
+        message,
+        path: request.url,
+      },
+      meta: {},
     });
   }
 }
