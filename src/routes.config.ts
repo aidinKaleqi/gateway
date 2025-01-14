@@ -1,4 +1,9 @@
-export const routesConfig = [
+interface RouteConfig {
+  path: string;
+  target: string;
+  guardEnabled: boolean;
+}
+export const routesConfig: RouteConfig[] = [
   {
     path: '/api/auth',
     target: 'http://127.0.0.1:8000/api/auth',

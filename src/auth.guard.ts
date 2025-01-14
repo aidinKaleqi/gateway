@@ -27,7 +27,6 @@ export class AuthGuard implements CanActivate {
       request.user = JSON.stringify(response.data.data);
       return true;
     } catch (error) {
-      console.log(error);
       return false;
     }
   }
